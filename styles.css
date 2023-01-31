@@ -1,0 +1,259 @@
+
+* {
+    box-sizing: border-box;
+  }
+  *::before,
+  *::after {
+    box-sizing: inherit;
+   
+  }
+body{
+    background: #00F260;  
+    background: linear-gradient(to right, #0575E6, #00F260);  
+    font-family: 'Source Serif Pro', serif;
+}
+
+.caja-encabezado {
+    position: relative;
+    text-align: center;
+    align-items: center;
+    background: darkgray;
+    margin: 0;
+    padding: 1em 0;
+    width: 100%;
+    
+}
+h1 img{
+    vertical-align: middle;
+    margin-right: 3vh;
+}
+.logo-titulo{
+    display: inline;
+    margin-left: 1em;
+    margin-right: 1em;
+    align-items: center;
+    vertical-align: middle;
+    
+}
+.titulo{
+    display: inline;
+    font-size: 2em;
+    color: white;
+    font-weight: bold;
+}
+main{
+    background: none;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+    display: block;
+    min-height: 78vh;
+}
+form{
+    padding: 0.5em;
+}
+#contenidoRes{
+    display: none;
+}
+.caja-texto-ingresado textarea , .caja-texto-optenido textarea{
+
+    outline: none;
+    border: none;
+    resize: none;
+    width: 90%;
+    height: 70%;
+    margin: 0.2em auto;
+    background: none; 
+    font-size: 1.5em;
+    font-family: 'Source Serif Pro', serif;
+    color: white;
+}
+
+.caja-munheco{
+    width: 90%;
+    height: 70%;
+    margin: .5em auto;
+}
+.caja-texto-optenido img{
+    width: 70%;
+    height: 90%;    
+}
+.caja-texto-optenido p{
+    font-family: 'Source Serif Pro', serif;
+    color: white; 
+    margin: 0.3em 0;
+}
+.caja-texto-ingresado img{
+    margin-right: 0.5em;
+    vertical-align: middle;
+}
+.caja-texto-ingresado textarea::-webkit-scrollbar , .caja-texto-optenido textarea::-webkit-scrollbar{
+    width: 0.4em;
+}
+.caja-texto-ingresado textarea::-webkit-scrollbar-thumb , .caja-texto-optenido textarea::-webkit-scrollbar-thumb{
+    background-color: #00F260;
+    border-radius: 0.1em;
+}
+.caja-textarea-ingresado{
+    width: 90%;
+    height: 70%; 
+    margin: 3px auto;  
+}
+
+.caja-texto-ingresado textarea:hover{
+    cursor: pointer;
+}
+.caja-texto-ingresado{
+   width: 400px;
+   height: 400px;
+   display: inline-block;
+   background: #135589;
+   text-align: center;
+   margin: 10px 10px 10px 10px;
+   padding: 10px 20px ;
+   padding-top: 20px;
+   border-radius: 0.8em;
+   box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+}
+
+.caja-texto-ingresado p{
+    color: white;
+    margin-bottom: 0.3em;
+}
+.caja-botonYparrafo{
+    margin: 0.5em 0.5em;
+    vertical-align: bottom;
+}
+.caja-texto-optenido{
+    height: 400px;
+    width: 400px;
+    display: inline-block;
+    background: #135589;
+    vertical-align: top;
+    margin: 10px 10px;
+    padding: 10px 10px ;
+    border-radius: 0.8em;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+}
+
+textarea::placeholder{
+    color: white;
+    font-family: 'Source Serif Pro', serif;
+    font-weight: bold;
+
+}
+.botonEncriptador {
+
+    font-weight: bold;
+    color: white;
+    font-size: 1em;
+    background: #00F260;
+    border: none;
+    border-radius: 0.7em;
+    padding: 0.6vh 0.6vh;
+    margin: 0.3vh 0;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#botonCopiar{
+    display: none;
+}
+footer{
+    bottom: 0;
+    background: darkgray;
+    width: 100%;
+}
+.piePagina{
+    background: darkgray;
+   text-align: center;
+   align-items: center;
+}
+.piePagina a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+.piePagina a:hover{
+    color: #00F260;
+    text-decoration: underline;
+}
+h2 img{
+    width: 3em;
+    margin: 1em;
+    vertical-align: middle;
+}
+@media screen and (max-width:840px){
+
+    #contenidoRes{
+        display: block;
+    } 
+    .caja-texto-optenido p{
+        display: none;
+    }
+    main{
+        min-height: 70vh;   
+    }
+    #contenidoRes{
+        display: block;
+        text-align: center;
+    }
+    .caja-texto-optenido ,.caja-texto-ingresado{
+        width: 60%;
+        text-align: center;
+
+    }
+    .caja-texto-ingresado{
+        height: 50vh;
+    }
+    .caja-texto-optenido{
+        align-items: center;
+        height: 32vh;
+    }
+    .caja-munheco{
+        display: none;
+    }
+    .caja-texto-optenido img{
+        display: none;
+    }
+    .caja-texto-ingresado{
+        height: 50vh;
+    }
+}
+@media screen and (max-width:480px){
+    
+    .caja-texto-ingresado textarea, .caja-texto-optenido textarea{
+        font-size: 1em;
+    }
+    .caja-texto-ingresado{
+        height: 50vh;
+        width: 80%;
+    }
+    .caja-texto-ingresado p{
+        font-size: 0.8em;
+    }
+    .caja-textarea-ingresado{
+        height: 50%;
+        margin: 3px auto;
+    }
+    .caja-botonYparrafo{
+        max-height: none;
+        height: 40%;
+
+    }
+    .caja-texto-optenido{
+        height: 30vh;
+        width: 80%;
+    }
+    .caja-texto-optenido img{
+        display: none;
+    }
+    .botonEncriptador {
+        font-size: 0.8em;
+    }
+    textarea::placeholder{
+        color: white;
+        font-weight: bold;
+        font-size: 1em;
+        font-family: 'Source Serif Pro', serif;
+    }
+   
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="caja-encabezado">
+            <h1 class="titulo"> <img src="imagenes/logoAlura.png">¡Bienvenido! al encriptador de texto</h1>
+        </div>
+    </header>
+    <main>
+            <form>
+                <div class="caja-texto-ingresado">
+                    <div class="caja-textarea-ingresado">
+                        <textarea id="textSinEcriptar" class="textIngresado" cols="30" rows="20" placeholder="ingrese el texto aquí"></textarea>
+                    </div>
+                    <div class="caja-botonYparrafo">
+                        <p> <img src="imagenes/signo.png"> solo letras minúsculas y palabras sin acento</p>
+                        <input type="submit" class="botonEncriptador" value="encriptar" id="Bencriptar">
+                        <input type="submit" class="botonEncriptador" value="desencriptar" id="Bdesencriptar">
+                    </div>
+                </div>
+
+                <div class="caja-texto-optenido">
+                    <div id="munheco-caja" class="caja-munheco">
+                        <img src="imagenes/Muñeco.png">
+                    </div>
+                    <textarea  id="contenidoRes" class="textEncriptado" cols="30" rows="20" readonly>texto vacio escriba su mensaje</textarea>
+                    <p id="parrafo">ningún mensaje<br>escriba el mensaje a encriptar</p>
+                    <input type="submit" class="botonEncriptador" id="botonCopiar" value="copiar">
+                </div>
+            </form>
+    </main>
+
+    <footer>
+        <div class="piePagina">
+            <h2 ><img src="imagenes/github.png"><a href="https://github.com/">dubanGL</a></h2>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
