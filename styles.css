@@ -8,7 +8,7 @@
    
   }
 body{
-    background: #00F260;  
+    background: #00F260;
     background: linear-gradient(to right, #0575E6, #00F260);  
     font-family: 'Source Serif Pro', serif;
 }
@@ -22,6 +22,9 @@ body{
     padding: 1em 0;
     width: 100%;
     
+}
+h1{
+    min-width: 180px;
 }
 h1 img{
     vertical-align: middle;
@@ -106,6 +109,7 @@ form{
 .caja-texto-ingresado{
    width: 400px;
    height: 400px;
+   /* min-width: 180px; */
    display: inline-block;
    background: #135589;
    text-align: center;
@@ -181,6 +185,7 @@ h2 img{
     margin: 1em;
     vertical-align: middle;
 }
+
 @media screen and (max-width:840px){
 
     #contenidoRes{
@@ -196,9 +201,13 @@ h2 img{
         display: block;
         text-align: center;
     }
+    .caja-textarea-ingresado{
+        height: 50%;
+    }
     .caja-texto-optenido ,.caja-texto-ingresado{
         width: 60%;
         text-align: center;
+        min-height: 200px;
 
     }
     .caja-texto-ingresado{
@@ -257,3 +266,4 @@ h2 img{
     }
    
 }
+

@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>Encriptador</title>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
             <form>
                 <div class="caja-texto-ingresado">
                     <div class="caja-textarea-ingresado">
-                        <textarea id="textSinEcriptar" class="textIngresado" cols="30" rows="20" placeholder="ingrese el texto aquí"></textarea>
+                        <textarea id="textSinEcriptar" spellcheck="false" class="textIngresado" cols="30" rows="20" placeholder="ingrese el texto aquí"></textarea>
                     </div>
                     <div class="caja-botonYparrafo">
                         <p> <img src="imagenes/signo.png"> solo letras minúsculas y palabras sin acento</p>
@@ -35,7 +35,7 @@
                     <div id="munheco-caja" class="caja-munheco">
                         <img src="imagenes/Muñeco.png">
                     </div>
-                    <textarea  id="contenidoRes" class="textEncriptado" cols="30" rows="20" readonly>texto vacio escriba su mensaje</textarea>
+                    <textarea  id="contenidoRes" spellcheck="false" class="textEncriptado" cols="30" rows="20" readonly>texto vacio escriba su mensaje</textarea>
                     <p id="parrafo">ningún mensaje<br>escriba el mensaje a encriptar</p>
                     <input type="submit" class="botonEncriptador" id="botonCopiar" value="copiar">
                 </div>
