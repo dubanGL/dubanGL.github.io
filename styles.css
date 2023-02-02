@@ -1,18 +1,23 @@
 
-* {
+*{
     box-sizing: border-box;
-  }
+}
   *::before,
   *::after {
     box-sizing: inherit;
-   
+}
+  html{
+    min-width: 200px;
   }
 body{
     background: #00F260;
+    position: relative;
+    padding-bottom: 4em;
+    min-width: 180px;
+    min-height: 100vh;
     background: linear-gradient(to right, #0575E6, #00F260);  
     font-family: 'Source Serif Pro', serif;
 }
-
 .caja-encabezado {
     position: relative;
     text-align: center;
@@ -21,10 +26,6 @@ body{
     margin: 0;
     padding: 1em 0;
     width: 100%;
-    
-}
-h1{
-    min-width: 180px;
 }
 h1 img{
     vertical-align: middle;
@@ -48,14 +49,16 @@ main{
     background: none;
     text-align: center;
     align-items: center;
-    margin: 0 auto;
     display: block;
+    min-width: 180px;
     min-height: 78vh;
 }
 form{
     padding: 0.5em;
+    margin: 10px auto;
+    
 }
-#contenidoRes{
+#caja-textarea-optenido{
     display: none;
 }
 .caja-texto-ingresado textarea , .caja-texto-optenido textarea{
@@ -64,7 +67,7 @@ form{
     border: none;
     resize: none;
     width: 90%;
-    height: 70%;
+    height: 100%;
     margin: 0.2em auto;
     background: none; 
     font-size: 1.5em;
@@ -83,7 +86,8 @@ form{
 }
 .caja-texto-optenido p{
     font-family: 'Source Serif Pro', serif;
-    color: white; 
+    color: white;
+    font-size: 1.5em; 
     margin: 0.3em 0;
 }
 .caja-texto-ingresado img{
@@ -99,7 +103,7 @@ form{
 }
 .caja-textarea-ingresado{
     width: 90%;
-    height: 70%; 
+    height: 50%; 
     margin: 3px auto;  
 }
 
@@ -109,26 +113,31 @@ form{
 .caja-texto-ingresado{
    width: 400px;
    height: 400px;
-   /* min-width: 180px; */
+   position: relative;
    display: inline-block;
    background: #135589;
    text-align: center;
-   margin: 10px 10px 10px 10px;
+   margin: 10px 10px;
    padding: 10px 20px ;
    padding-top: 20px;
    border-radius: 0.8em;
    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
 }
-
 .caja-texto-ingresado p{
     color: white;
     margin-bottom: 0.3em;
 }
+
 .caja-botonYparrafo{
-    margin: 0.5em 0.5em;
-    vertical-align: bottom;
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+    margin-bottom: 8%;
+    width: 80%;
+    left: 10%;
 }
 .caja-texto-optenido{
+    position: relative;
     height: 400px;
     width: 400px;
     display: inline-block;
@@ -139,7 +148,17 @@ form{
     border-radius: 0.8em;
     box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
 }
+#botonCopiar{
+    text-align: center;
+}
 
+#boton-copiar{
+    position: absolute;
+    width: 80%;
+    margin-bottom: 3vh;
+    bottom: 0;
+    left: 10%;
+}
 textarea::placeholder{
     color: white;
     font-family: 'Source Serif Pro', serif;
@@ -162,6 +181,7 @@ textarea::placeholder{
     display: none;
 }
 footer{
+    position: absolute;
     bottom: 0;
     background: darkgray;
     width: 100%;
@@ -180,51 +200,36 @@ footer{
     color: #00F260;
     text-decoration: underline;
 }
-h2 img{
+.piePagina img{
     width: 3em;
     margin: 1em;
+    margin-right: 0.5em;
     vertical-align: middle;
 }
 
 @media screen and (max-width:840px){
 
-    #contenidoRes{
-        display: block;
-    } 
     .caja-texto-optenido p{
-        display: none;
-    }
-    main{
-        min-height: 70vh;   
-    }
-    #contenidoRes{
-        display: block;
-        text-align: center;
-    }
-    .caja-textarea-ingresado{
-        height: 50%;
+        font-size: 1.2em;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
     }
     .caja-texto-optenido ,.caja-texto-ingresado{
-        width: 60%;
+        width: 70%;
         text-align: center;
-        min-height: 200px;
-
+        min-height: 250px;
     }
     .caja-texto-ingresado{
         height: 50vh;
     }
     .caja-texto-optenido{
         align-items: center;
-        height: 32vh;
+        height: 20vh;
     }
-    .caja-munheco{
+    .caja-munheco,.caja-texto-optenido img{
         display: none;
-    }
-    .caja-texto-optenido img{
-        display: none;
-    }
-    .caja-texto-ingresado{
-        height: 50vh;
     }
 }
 @media screen and (max-width:480px){
@@ -232,38 +237,11 @@ h2 img{
     .caja-texto-ingresado textarea, .caja-texto-optenido textarea{
         font-size: 1em;
     }
-    .caja-texto-ingresado{
-        height: 50vh;
-        width: 80%;
-    }
     .caja-texto-ingresado p{
         font-size: 0.8em;
     }
-    .caja-textarea-ingresado{
-        height: 50%;
-        margin: 3px auto;
-    }
-    .caja-botonYparrafo{
-        max-height: none;
-        height: 40%;
-
-    }
-    .caja-texto-optenido{
-        height: 30vh;
-        width: 80%;
-    }
-    .caja-texto-optenido img{
-        display: none;
-    }
     .botonEncriptador {
         font-size: 0.8em;
-    }
-    textarea::placeholder{
-        color: white;
-        font-weight: bold;
-        font-size: 1em;
-        font-family: 'Source Serif Pro', serif;
-    }
-   
+    }  
 }
 

@@ -6,23 +6,24 @@ function cambiarCadena(mensaje,clave,Posicion) {
 
     return codigo;
 }
-
+function cambiarEstilo() {
+    document.getElementById("parrafo").style.display = "none";
+    document.getElementById("munheco-caja").style.display ="none";
+    document.getElementById("caja-textarea-optenido").style.display = "block";
+    document.getElementById("botonCopiar").style.display = "inline";
+}
 function encriptar(event) {
 
     event.preventDefault();
     var mensaje = document.getElementById("textSinEcriptar").value
     var contador    = 0;
     var codigo;
+    cambiarEstilo();
 
     if(mensaje.length===0){
         alert("mensaje vacio")
     }
     else{
-
-        document.getElementById("parrafo").style.display = "none";
-        document.getElementById("munheco-caja").style.display ="none";
-        document.getElementById("contenidoRes").style.display = "block";
-        document.getElementById("botonCopiar").style.display = "inline";
 
         while (contador <= mensaje.length) {
         
@@ -81,18 +82,13 @@ function desEncriptar(event){
     if(texto.length===0)
         alert("texto vacio");
     else{
-            var patron = /ai/ig;
-            var patron2 = /ufat/ig;
-            var patron3 = /ober/ig;
-            var patron4 =/enter/ig;
-            var patron5 = /imes/ig;
-
-            texto = texto.replace(patron,"a")
-            texto = texto.replace(patron2,"u")
-            texto = texto.replace(patron3,"o")
-            texto = texto.replace(patron4,"e")
-            texto = texto.replace(patron5,"i")
-
+        cambiarEstilo();
+            texto = texto.replace(/ai/ig,"a")
+            texto = texto.replace(/ufat/ig,"u")
+            texto = texto.replace(/ober/ig,"o")
+            texto = texto.replace(/enter/ig,"e")
+            texto = texto.replace(/imes/ig,"i")
+        
             document.getElementById("contenidoRes").textContent = texto;
     }
 }

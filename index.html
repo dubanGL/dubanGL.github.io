@@ -22,10 +22,10 @@
             <form>
                 <div class="caja-texto-ingresado">
                     <div class="caja-textarea-ingresado">
-                        <textarea id="textSinEcriptar" spellcheck="false" class="textIngresado" cols="30" rows="20" placeholder="ingrese el texto aquí"></textarea>
+                        <textarea id="textSinEcriptar" spellcheck="false" class="textIngresado" cols="30" rows="20" placeholder="Ingrese el texto aquí"></textarea>
                     </div>
                     <div class="caja-botonYparrafo">
-                        <p> <img src="imagenes/signo.png"> solo letras minúsculas y palabras sin acento</p>
+                        <p> <img src="imagenes/signo.png">Solo letras minúsculas y palabras sin acento</p>
                         <input type="submit" class="botonEncriptador" value="encriptar" id="Bencriptar">
                         <input type="submit" class="botonEncriptador" value="desencriptar" id="Bdesencriptar">
                     </div>
@@ -35,16 +35,22 @@
                     <div id="munheco-caja" class="caja-munheco">
                         <img src="imagenes/Muñeco.png">
                     </div>
-                    <textarea  id="contenidoRes" spellcheck="false" class="textEncriptado" cols="30" rows="20" readonly>texto vacio escriba su mensaje</textarea>
-                    <p id="parrafo">ningún mensaje<br>escriba el mensaje a encriptar</p>
-                    <input type="submit" class="botonEncriptador" id="botonCopiar" value="copiar">
+                    <p id="parrafo"><strong>Ningún mensaje</strong><br>Escriba el texto a encriptar</p>
+                   
+                    <div class="caja-textarea-ingresado" id="caja-textarea-optenido">
+                        <textarea  id="contenidoRes" spellcheck="false" class="textEncriptado" cols="30" rows="20"    readonly></textarea>
+                    </div>
+                    <div class="caja-botonYparrafo" >
+                        <input type="submit" class="botonEncriptador" id="botonCopiar" value="copiar">
+                    </div>
                 </div>
             </form>
     </main>
 
     <footer>
         <div class="piePagina">
-            <h2 ><img src="imagenes/github.png"><a href="https://github.com/">dubanGL</a></h2>
+            <a title="Los Tejos" href="https://www.linkedin.com/in/esneider-guarin-b1746a235/" target="_blank"><img id="linkedin" src="imagenes/linkedin-log.png" alt="logo-linkedin" /></a>
+            <a title="Los Tejos" href="https://github.com/dubanGL/dubanGL.github.io" target="_blank"><img id="linkedin" src="imagenes/github.png" alt="logo-github" /></a>
         </div>
     </footer>
     <script src="app.js"></script>
